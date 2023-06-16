@@ -23,7 +23,12 @@ return <Table>
 }
 
 TransactionHistory.propTypes = {
-   type: PropTypes.string.isRequired,
-   amount: PropTypes.number.isRequired,
-   currency: PropTypes.string.isRequired,
+   items: PropTypes.arrayOf(
+      PropTypes.exact({
+         type: PropTypes.string.isRequired,
+         amount: PropTypes.number.isRequired,
+         currency: PropTypes.string.isRequired,
+      })
+   )
+  
 }
