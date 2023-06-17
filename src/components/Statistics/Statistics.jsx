@@ -3,9 +3,7 @@ import { Statistic, Title, StatList, Item, Label, Percentage } from './Statistic
 
 export const Statistics = ({title, stats}) => {
    return <Statistic>
-      {
-      (title) ? <Title>{title}</Title> : ""
-   }
+      {title && <Title>{title}</Title>}
    
  
    <StatList>
