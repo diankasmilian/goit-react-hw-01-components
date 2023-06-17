@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { Table } from './TransactionHistory.styled';
 export const TransactionHistory = ({items}) => {
-  const number = 5;
 return <Table>
   <thead>
     <tr>
