@@ -3,7 +3,10 @@ import { Statistic, Title, StatList, Item, Label, Percentage } from './Statistic
 
 export const Statistics = ({title, stats}) => {
    return <Statistic>
-   <Title>{title}</Title>
+      {
+      (title) ? <Title>{title}</Title> : ""
+   }
+   
  
    <StatList>
       {stats.map(({id, label, percentage}) => (
@@ -20,8 +23,9 @@ Statistics.propTypes = {
    title: PropTypes.string,
    stats: PropTypes.arrayOf(
       PropTypes.exact({
-      label: PropTypes.string,
-      percentage: PropTypes.string,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
       })
    )
    

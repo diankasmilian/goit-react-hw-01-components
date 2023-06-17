@@ -3,10 +3,10 @@ import { Container } from "./App.styled";
 import { Statistics } from "components/Statistics/Statistics";
 import { FriendList } from "components/FriendList/FriendList";
 import { TransactionHistory } from "components/TransactionHistory/TransactionHistory";
-import user from "user";
-import data from "data"
-import friends from "friends"
-import transactions from "transactions"
+import user from "../data/user";
+import data from "../data/data"
+import friends from "../data/friends"
+import transactions from "../data/transactions"
 
 export const App = () => {
   return (
